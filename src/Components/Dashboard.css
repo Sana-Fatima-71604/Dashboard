@@ -1,0 +1,52 @@
+/* the dashboard css starts here */
+#dashboard {
+    width: 1800px;
+    height: 2000px;
+    margin: 0 auto; /* Added */
+    /* float: none; Added */
+    margin-bottom: 10px; /* Added */
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    justify-content: center;
+    display: flex;
+}
+.nav {
+    background-color: aqua;
+    padding: 10px;
+}
+
+li {
+    margin-right: 20px;
+}
+
+#card1, #card2, #card3 {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+        margin-top: 150px;
+        padding: 20px;
+        border-radius: 15px;
+}
+
+#card4 {
+    width: 200px;
+    height: 300px;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    margin-top: 150px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+div {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+#section1, #section2 {
+    display: inline-block;
+} 
