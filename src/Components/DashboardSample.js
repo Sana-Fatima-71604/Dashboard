@@ -63,10 +63,10 @@ function DashboardSample() {
                                 </tr>
                                 {table.map((table, index) => {
                                     return (<tr>
-                                                <th style={{fontWeight: "normal"}}><i className="fa fa-cloud" style={{padding: "0px", fontSize: "20px", color: "rgb(17, 146, 252)"}}></i><p style={{padding: "0px", margin: "0px"}}>{table}</p><p style={{color: "grey"}}>10 lessons</p></th>
+                                                <th style={{fontWeight: "normal"}}><i className="fa fa-cloud" style={{padding: "0px", fontSize: "20px"}}></i><p style={{padding: "0px", margin: "0px"}}>{table}</p><p>10 lessons</p></th>
                                                 <th style={{fontWeight: "normal"}}>Advance</th>
                                                 <th style={{fontWeight: "normal"}}>02 Jan, 2023</th>
-                                                <th><button style={{color:"green", borderRadius: "10px", fontWeight: "bold", borderColor: "rgb(170, 228, 168)", backgroundColor: "rgb(170, 228, 168)"}}>{button[index]}</button></th>
+                                                <th><button style={{borderRadius: "10px", fontWeight: "bold"}}>{button[index]}</button></th>
                                     </tr>)
                                 })}
                             
