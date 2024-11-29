@@ -1,10 +1,11 @@
-import './Dashboard.css';
+import './DashboardSample.css';
 
-function Dashboard() {
-
-    return (<div id="dashboard">
-                <div id="navs">
-                    <nav id="sidebar">                
+function DashboardSample() {
+    return (
+        <div className="dashboard">
+            <div className="sidenav">
+                    <nav>  
+                        <h2 style={{marginBottom: "80px"}}>{"<LEARN/>"}</h2>              
                         <ul className="navbar-nav">
                             <li className="nav-item">Dashboard</li>
                             <li className="nav-item">My Courses</li>
@@ -13,24 +14,28 @@ function Dashboard() {
                             <li className="nav-item">Settings</li>
                         </ul>
                     </nav>
-
-                    <nav id="horizontalbar">
-                        <div className='container-fluid'>
-                            <ul className='navbar-nav'>
-                                <li className = "nav-item">
-                                    <i className ="bi bi-list"></i>
-                                </li>
-                                <li className = "nav-item">
-                                    <form className="d-flex" role="search">
-                                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                                    </form>
-                                </li>
-                                <li className = "nav-item">Search</li> 
-                            </ul>
-                        </div>
+            </div>
+            <div className="main">
+                <div className = "horizontalbar">
+                    <nav>
+                        <ul className='navbar-nav'>
+                            <li className = "nav-item">
+                                <form>
+                                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                                </form>
+                            </li>
+                            <li className = "nav-item">Search</li>
+                        </ul>
                     </nav>
-                </div>          
-                    <div id ="main">
+                    <div className="profile">
+                        <div>Profile</div>
+                        <div>Notifications</div>
+                    </div>
+
+                </div>
+                <div className="main-content">
+                    <div className="main-content-main">
+                        <p>WELCOME BACK</p>
                         <div id="section1">
                             {/* <p> Welcome back John </p> */}
                             <div className="my-0">
@@ -81,8 +86,9 @@ function Dashboard() {
                             </table>
                             </div>
                         </div>
-                        <div id="section2">
-                            <div className="card" id="test">
+                    </div>
+                    <div className = "main-content-side">
+                    <div className="card" id="test">
                                 <p style={{fontSize: "30px", marginBottom: "20px", lineHeight: "1"}} className='text-center'>Test Schedule</p>
                                 <p style={{fontWeight: "normal"}}><i className="fa fa-cloud" style={{padding: "0px", fontSize: "20px", color: "rgb(17, 146, 252)"}}></i><p style={{padding: "0px", margin: "0px"}}>React Test</p><p style={{color: "grey"}}>September 02, 2023 from 1 pm to 3 pm</p></p>
                                 <p style={{fontWeight: "normal"}}><i className="fa fa-cloud" style={{padding: "0px", fontSize: "20px", color: "rgb(17, 146, 252)"}}></i><p style={{padding: "0px", margin: "0px"}}>React Test</p><p style={{color: "grey"}}>September 02, 2023 from 1 pm to 3 pm</p></p>
@@ -90,10 +96,12 @@ function Dashboard() {
                                 <hr className='lh-10'/>
                                 <a href="/signin" className='text-center'>See all</a>
                             </div>
-                            <div className="card">Calender</div>
-                        </div>
-                        </div>
-        </div>)
+                            <div className="card" style={{width: "350px", padding: "30px"}}>Calender</div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    )
 }
 
-export default Dashboard;
+export default DashboardSample;
