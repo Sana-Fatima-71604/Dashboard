@@ -1,17 +1,24 @@
 import './DashboardSample.css';
 
 function DashboardSample() {
+
+    const bar = ["Dashboard", "My Courses", "Messages", "Reports", "Settings"];
+    const tr = ["Course Name", "Level", "Date", "Status"];
+    const test = ["React Test","React Test", "React Test"];
+    const table= ["Web Designs", "Illustrations", "Photoshop", "React", "Web Design"];
+    const button = ["Completed", "Ongoing", "Intersted", "Completed", "Completed"];
+    
     return (
         <div className="dashboard">
             <div className="sidenav">
-                    <nav>  
-                        <h2 style={{marginBottom: "80px"}}>{"<LEARN/>"}</h2>              
+                    <nav> 
+                        <h2 style={{marginBottom: "80px"}}>{"<LEARN/>"}</h2>           
                         <ul className="navbar-nav">
-                            <li className="nav-item">Dashboard</li>
-                            <li className="nav-item">My Courses</li>
-                            <li className="nav-item">Messages</li>
-                            <li className="nav-item">Reports</li>
-                            <li className="nav-item">Settings</li>
+                            {                           
+                                bar.map((bar, index) => {
+                                    return (<li key = {index}>{bar}</li>
+                                )})
+                            }
                         </ul>
                     </nav>
             </div>
@@ -48,41 +55,21 @@ function DashboardSample() {
                             <br/>
                             <table>
                                 <tr style={{color: "grey"}}>
-                                    <th>Course Name</th>
-                                    <th>Level</th>
-                                    <th>Date</th>
-                                    <th>Status</th>
+                                    {
+                                        tr.map((tr) => {
+                                            return (<th>{tr}</th>)
+                                        })
+                                    }
                                 </tr>
-                                <tr>
-                                    <th style={{fontWeight: "normal"}}><i className="fa fa-cloud" style={{padding: "0px", fontSize: "20px", color: "rgb(17, 146, 252)"}}></i><p style={{padding: "0px", margin: "0px"}}>Web Design</p><p style={{color: "grey"}}>10 lessons</p></th>
-                                    <th style={{fontWeight: "normal"}}>Advance</th>
-                                    <th style={{fontWeight: "normal"}}>02 Jan, 2023</th>
-                                    <th><button style={{color:"green", borderRadius: "10px", fontWeight: "bold", borderColor: "rgb(170, 228, 168)", backgroundColor: "rgb(170, 228, 168)"}}>Completed</button></th>
-                                </tr>
-                                <tr>
-                                    <th style={{fontWeight: "normal"}}><i className="fa fa-cloud" style={{padding: "0px", fontSize: "20px", color: "rgb(101, 162, 199)"}}></i><p style={{padding: "0px", margin: "0px"}}>Illustrations</p><p style={{color: "grey"}}>10 lessons</p></th>
-                                    <th style={{fontWeight: "normal"}}>Advance</th>
-                                    <th style={{fontWeight: "normal"}}>02 Jan, 2023</th>
-                                    <th><button style={{color:"rgb(241, 126, 31)", borderRadius: "10px", fontWeight: "bold", borderColor: "rgb(250, 189, 139)", backgroundColor: "rgb(250, 189, 139)"}}>Ongoing</button></th>
-                                </tr>
-                                <tr>
-                                    <th style={{fontWeight: "normal"}}><i className="fa fa-cloud" style={{padding: "0px", fontSize: "20px", color: "rgb(101, 162, 199)"}}></i><p style={{padding: "0px", margin: "0px"}}>Photoshop</p><p style={{color: "grey"}}>10 lessons</p></th>
-                                    <th style={{fontWeight: "normal"}}>Advance</th>
-                                    <th style={{fontWeight: "normal"}}>02 Jan, 2023</th>
-                                    <th><button style={{color:"rgb(16, 104, 245)", borderRadius: "10px", fontWeight: "bold", borderColor: "rgb(165, 197, 247)", backgroundColor: "rgb(165, 197, 247)"}}>Interested</button></th>
-                                </tr>
-                                <tr>
-                                    <th style={{fontWeight: "normal"}}><i className="fa fa-cloud" style={{padding: "0px", fontSize: "20px", color: "rgb(101, 162, 199)"}}></i><p style={{padding: "0px", margin: "0px"}}>React</p><p style={{color: "grey"}}>10 lessons</p></th>
-                                    <th style={{fontWeight: "normal"}}>Advance</th>
-                                    <th style={{fontWeight: "normal"}}>02 Jan, 2023</th>
-                                    <th><button style={{color:"green", borderRadius: "10px", fontWeight: "bold", borderColor: "rgb(170, 228, 168)", backgroundColor: "rgb(170, 228, 168)"}}>Completed</button></th>
-                                </tr>
-                                <tr>
-                                    <th style={{fontWeight: "normal"}}><i className="fa fa-cloud" style={{padding: "0px", fontSize: "20px", color: "rgb(17, 146, 252)"}}></i><p style={{padding: "0px", margin: "0px"}}>Web Design</p><p style={{color: "grey"}}>10 lessons</p></th>
-                                    <th style={{fontWeight: "normal"}}>Advance</th>
-                                    <th style={{fontWeight: "normal"}}>02 Jan, 2023</th>
-                                    <th><button style={{color:"green", borderRadius: "10px", fontWeight: "bold", borderColor: "rgb(170, 228, 168)", backgroundColor: "rgb(170, 228, 168)"}}>Completed</button></th>
-                                </tr>
+                                {table.map((table, index) => {
+                                    return (<tr>
+                                                <th style={{fontWeight: "normal"}}><i className="fa fa-cloud" style={{padding: "0px", fontSize: "20px", color: "rgb(17, 146, 252)"}}></i><p style={{padding: "0px", margin: "0px"}}>{table}</p><p style={{color: "grey"}}>10 lessons</p></th>
+                                                <th style={{fontWeight: "normal"}}>Advance</th>
+                                                <th style={{fontWeight: "normal"}}>02 Jan, 2023</th>
+                                                <th><button style={{color:"green", borderRadius: "10px", fontWeight: "bold", borderColor: "rgb(170, 228, 168)", backgroundColor: "rgb(170, 228, 168)"}}>{button[index]}</button></th>
+                                    </tr>)
+                                })}
+                            
                             </table>
                             </div>
                         </div>
@@ -90,9 +77,14 @@ function DashboardSample() {
                     <div className = "main-content-side">
                     <div className="card" id="test">
                                 <p style={{fontSize: "30px", marginBottom: "20px", lineHeight: "1"}} className='text-center'>Test Schedule</p>
-                                <p style={{fontWeight: "normal"}}><i className="fa fa-cloud" style={{padding: "0px", fontSize: "20px", color: "rgb(17, 146, 252)"}}></i><p style={{padding: "0px", margin: "0px"}}>React Test</p><p style={{color: "grey"}}>September 02, 2023 from 1 pm to 3 pm</p></p>
-                                <p style={{fontWeight: "normal"}}><i className="fa fa-cloud" style={{padding: "0px", fontSize: "20px", color: "rgb(17, 146, 252)"}}></i><p style={{padding: "0px", margin: "0px"}}>React Test</p><p style={{color: "grey"}}>September 02, 2023 from 1 pm to 3 pm</p></p>
-                                <p style={{fontWeight: "normal"}}><i className="fa fa-cloud" style={{padding: "0px", fontSize: "20px", color: "rgb(17, 146, 252)"}}></i><p style={{padding: "0px", margin: "0px"}}>React Test</p><p style={{color: "grey"}}>September 02, 2023 from 1 pm to 3 pm</p></p>
+                                {
+                                    test.map((test) => {
+                                        return (
+                                            <p style={{fontWeight: "normal"}}><i className="fa fa-cloud" style={{padding: "0px", fontSize: "20px", color: "rgb(17, 146, 252)"}}></i><p style={{padding: "0px", margin: "0px"}}>{test}</p><p style={{color: "grey"}}>September 02, 2023 from 1 pm to 3 pm</p></p>
+                                        );
+                                    })
+                                }
+                                
                                 <hr className='lh-10'/>
                                 <a href="/signin" className='text-center'>See all</a>
                             </div>
