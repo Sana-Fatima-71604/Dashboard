@@ -1,52 +1,99 @@
-/* the dashboard css starts here */
-#dashboard {
-    width: 1800px;
-    height: 2000px;
-    margin: 0 auto; /* Added */
-    /* float: none; Added */
-    margin-bottom: 10px; /* Added */
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 15px;
-    justify-content: center;
-    display: flex;
-}
-.nav {
-    background-color: aqua;
-    padding: 10px;
+/* This is the css for the elements */
+div {
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 
 li {
     margin-right: 20px;
 }
 
+/* This is the css for the classes */
+.nav {
+    background-color: rgb(171, 235, 171);
+    padding: 10px;
+    margin-top: 0px;
+    display: flex;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* This is the css for the Id elements*/
+#dashboard {
+    width: 1800px;
+    height: 1400px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 0%;
+    border-radius: 15px;
+    background-color: lightblue;
+    display: flex;
+}
+
+#sidebar {
+    width: 250px;
+    height: 1400px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: lightsalmon;
+    display: flex;
+}
+
+#main {
+    margin-left: 150px;
+}
+
 #card1, #card2, #card3 {
-        width: 200px;
+        width: 300px;
         height: 200px;
-        margin: 0 auto; /* Added */
-        float: none; /* Added */
-        margin-bottom: 10px; /* Added */
-        margin-top: 150px;
+        margin: 25px;
+        float: none;
+        margin-bottom: 0px;
+        margin-top: 0px;
         padding: 20px;
         border-radius: 15px;
+        font-size: x-large;
+        font-weight: bold;
 }
 
 #card4 {
-    width: 200px;
-    height: 300px;
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
-    margin-top: 150px;
-    padding: 20px;
-    border-radius: 15px;
-}
-
-div {
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    float: none;
     margin-bottom: 10px;
-    font-size: 15px;
+    margin-top: 10px;
+    padding: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
 }
 
 #section1, #section2 {
     display: inline-block;
-} 
+}
+
+#test {
+    width: 400px;
+    padding: 30px;
+    margin-right: 0%;
+}
+
+#navs {
+    float: left;
+}
+
+#horizontalbar {
+    padding-top: 10px;
+    width: 100%;
+    height: 80px;
+    border-radius: 15px;
+    background-color: lightseagreen;
+}
