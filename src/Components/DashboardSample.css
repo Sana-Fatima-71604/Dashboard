@@ -3,16 +3,15 @@
     background-color: lavender;
     margin: 20px;
     border-radius: 20px;
-    width: 1750px;
+    width: 1700px;
     height: 100%;
     padding: 0%;
-    justify-content: space-between;
 }
 .sidenav {
     width: 300px;
     height: 100%;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 15px 0px 0px 15px;
     background-color: rgb(17, 146, 252);
 }
 .sidenav li {
@@ -34,17 +33,40 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
+    border-radius: 0px 15px 0px 0px;
     background-color: white;
     margin-left:0px;
+    margin-top: 0px;
+}
+
+.horizontalbar ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+.horizontalbar div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: space-around;
+    width: 200px;
 }
 .main {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+
 }
 .main-content {
     display: flex;
     flex-direction: row;
+    margin-top: 0px;
 }
+.main-content-side {
+    margin-right: 30px;
+}
+
 .main-content-side, .main-content-main {
     display: flex;
     flex-direction: column;
@@ -61,19 +83,48 @@
     width: 500px;
 }
 
-h2 {
+.h2 {
     color: white;
     font-weight: bold;
+    font-size: 40px;
     font-family: "Bradley Hand", cursive;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    justify-content: center;
+    padding: 0%;
 }
+
+.fa:hover {
+    opacity: 0.9;
+}
+
+
+div {
+    margin-bottom: 20px;
+    justify-content: center;
+    display: flex; 
+    font-size: 15px;
+}
+
+p {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+body {
+    background: url('https://static.vecteezy.com/system/resources/previews/001/227/744/original/trendy-color-gradient-creative-background-vector.jpg') no-repeat center center fixed;
+    background-color: lightblue;
+    background-size: cover;
+}
+
 
 #section1 {
     display: flex;
     flex-direction: column;
 }
 #test {
-    width: 350px;
-    padding: 30px;
+    width: 320px;
+    padding: 20px;
 }
 
 #card1, #card2, #card3 {
@@ -91,7 +142,7 @@ h2 {
 
 #card4 {
 width: 1000px;
-height: 600px;
+height: 700px;
 margin: 0 auto;
 float: none;
 margin-bottom: 10px;
