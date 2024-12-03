@@ -11,12 +11,7 @@ function SignUp() {
     const [currentPasswordvalue, updatePasswordvalue] = useState("")
     const [currentEmailvalue, updateEmailvalue] = useState("")
 
-    if (currentUservalue === "" || currentPasswordvalue === "" || currentEmailvalue === "") {
-        document.getElementById("my-btn").disabled = true;
-    } 
-    else {
-        document.getElementById("my-btn").disabled = false;
-    }
+    const isDisabled = currentEmailvalue === "" || currentPasswordvalue === "" || currentUservalue === "";
     const signinHandler = async () => {
 
             
@@ -81,7 +76,7 @@ function SignUp() {
                     updatePasswordvalue(e.target.value)
                 }}/><br/><br/>
 
-                <button type="submit" onClick={signinHandler} className="btn btn-primary" id="my-btn">SIGN UP</button>
+                <button type="submit" onClick={signinHandler} className="btn btn-primary" disabled = {isDisabled}>SIGN UP</button>
                 <br/>
                 <Link to='/signin' className="link">or Sign_In</Link><br/>
                 
